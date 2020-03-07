@@ -32,7 +32,8 @@ const ProductsPage = () => {
       }
       return 0
     });
-  }
+  };
+
   return (
     <React.Fragment>
       <div className={styles.nav}>MovieLand</div>

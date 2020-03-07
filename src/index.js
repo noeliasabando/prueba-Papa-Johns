@@ -22,7 +22,8 @@ const App = () => {
         })
     }
     logIn();
-  }, [])
+  }, []);
+  
   return (
     <BrowserRouter>
       <Route path='/' component={ProductsPage} />

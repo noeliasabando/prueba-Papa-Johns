@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './OrderByName.module.scss';
 
-
-const OrderByName = ({setOrder}) => {
+const OrderByName = ({ setOrder }) => {
   return (
     <div className={styles.container}>
       <button className={styles.btn} onClick={() => setOrder('asc')}>Ordenar A-Z</button>

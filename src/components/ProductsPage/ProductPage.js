@@ -5,6 +5,7 @@ import styles from './ProductPage.module.scss';
 const ProductPage = ({ photo, title, year, description, author }) => {
   const [show, setShow] = useState(false);
   const price = Math.floor(Math.random() * 1000);
+
   return (
     <div className={styles.containerBook}>
       <img className={styles.img} src={`http://thetvdb.com${photo}`} alt="movie" />
