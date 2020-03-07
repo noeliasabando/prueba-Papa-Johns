@@ -1,0 +1,34 @@
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px 0;
+    .input {
+      border: 1px solid #ededee;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .input:focus {
+      outline: none;
+    }
+    .btn {
+      border-radius: 20px;
+      width: 40px;
+    }
+    .btn:focus {
+      outline: none;
+    }
+    .elements {
+      display: grid;
+      grid-gap: 20px;
+      grid-column: 2 / 2;
+      grid-template: 1fr/1fr minmax(0, max-content);
+    }
+@media(max-width: 640px) {
+  .elements {
+    margin: 0 15px;
+    grid-gap: 6px;
+    grid-column: 1/ 4;
+  }
+}
+}
