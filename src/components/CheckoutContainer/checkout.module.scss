@@ -1,0 +1,73 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .containerCheckout{
+    background: white;
+    grid-column: 2 /span 1;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+
+     .containerData {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+     }
+      .price {
+        text-align: end;
+      }
+      .pay {
+        border: 1px solid;
+        border-radius: 10px;
+        width: max-content;
+        padding: 7px;
+        justify-self: end;
+        cursor: pointer;
+      }
+      .buy {
+        border: 1px solid;
+        width: max-content;
+        border-radius: 10px;
+        padding: 7px;
+        cursor: pointer;
+      }
+    .emptyCart {
+      text-align: center;
+    }
+  }
+  .titleCheckout {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+
+@media(max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 0 15px;
+
+    .containerCheckout {
+      margin-top: 10px;
+      grid-column: 1 /span 2;
+
+        .containerData {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+            .movieName {
+              grid-column: 1 / span 2;
+            }
+            .buy {
+              grid-column: 1 / span 2;
+            }
+            .price {
+              grid-column: 3 / span 1;
+            }
+            .pay {
+              grid-column: 3 / span 1;
+            }
+        }
+    }
+  }
+} 

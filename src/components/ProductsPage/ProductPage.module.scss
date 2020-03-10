@@ -43,6 +43,16 @@ body {
       cursor: pointer;
       font-weight: 800;
     }
+    .added {
+      grid-row: 2 / span 1;
+      margin-top: 12px;
+      padding: 6px;
+      border-radius: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      border-color: #e4b3d0;
+      background: #e4b3d0;
+    }
     .buy {
       grid-row: 2 / span 1;
       margin-top: 12px;
@@ -52,7 +62,7 @@ body {
       cursor: pointer;
       border-color: #e4b3d0;
     }
-    .buy:focus {
+    .buy:focus, .added:focus {
       outline: none;
     }
   }
@@ -63,6 +73,17 @@ body {
     font-size: 30px;
     font-weight: 800;
     padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .titlePage {
+      grid-column: 2 / span 2;
+    }
+    .checkout {
+      grid-column: 4 / span 1;
+      font-size: 14px;
+      cursor: pointer;
+    }
   }
 
   .containerBook{
@@ -83,6 +104,14 @@ body {
     .container {
       grid-template-columns: 1fr;
       margin: 0 15px;
+    }
+    .nav {
+      .titlePage {
+        grid-column: 1 / span 2;
+      }
+      .checkout {
+        grid-column: 3 / span 2;
+      }
     }
   }
 }

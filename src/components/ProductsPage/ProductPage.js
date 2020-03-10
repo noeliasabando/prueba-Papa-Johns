@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import styles from './ProductPage.module.scss';
 
 
-const ProductPage = ({ photo, title, year, description, author }) => {
+const ProductPage = ({ photo, title, year, description, author, price, addToCart }) => {
   const [show, setShow] = useState(false);
-  const price = Math.floor(Math.random() * 1000);
+  const [addedToCart, setAddedToCart] = useState(false);
+
+  const handleClick = () => {
+    setAddedToCart(true);
+    addToCart()
+  }
+
 
   return (
     <div className={styles.containerBook}>
@@ -23,7 +29,11 @@ const ProductPage = ({ photo, title, year, description, author }) => {
         <p className={styles.year}>Estrenada el {year}</p>
       }
       <p className={styles.price}>${price}</p>
-      <button className={styles.buy}>Comprar</button>
+      {addedToCart ?
+        <button className={styles.added}>Añadido al carrito</button>
+        :
+        <button className={styles.buy} onClick={handleClick} >Comprar</button>
+      }
     </div>
   );
 }
