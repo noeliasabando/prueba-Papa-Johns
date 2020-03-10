@@ -1,10 +1,12 @@
+import { ADD_TO_CART } from '../constants';
+
 const defaultState = {
   cart: [],
 };
 
 const reducer = (state = defaultState, { type, payload }) => {
   switch (type) {
-    case 'ADD_TO_CART': {
+    case ADD_TO_CART: {
       return {
         ...state,
         cart: [
