@@ -50,7 +50,7 @@ const ProductsPage = (props) => {
       return 0
     });
   };
-  console.log(addToCart)
+
   return (
     <React.Fragment>
       <div className={styles.nav}>
